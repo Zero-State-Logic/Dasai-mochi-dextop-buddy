@@ -1,0 +1,13 @@
+{
+  "name": "Dasai Mochi Bot",
+  "version": "1.0.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "parts": [
+        { "path": "dasai_mochi_bot.merged.bin", "offset": 0 }
+      ]
+    }
+  ]
+}

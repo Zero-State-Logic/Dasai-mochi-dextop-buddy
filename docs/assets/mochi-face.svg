@@ -1,0 +1,142 @@
+<svg width="420" height="320" viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dasai Mochi animated face">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#fbf5ea"/>
+      <stop offset="100%" stop-color="#f4ecdf"/>
+    </radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fdf6ec"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#7a5a3a" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="420" height="320" rx="26" fill="url(#bg)"/>
+
+  <!-- floating group -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="0 0; 0 -10; 0 0" dur="4s" repeatCount="indefinite" calcMode="spline"
+      keyTimes="0;0.5;1" keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+    <!-- shadow -->
+    <ellipse cx="210" cy="262" rx="92" ry="16" fill="#7a5a3a" opacity="0.12">
+      <animate attributeName="rx" values="92;80;92" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.08;0.12" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- mochi body -->
+    <ellipse cx="210" cy="160" rx="120" ry="100" fill="url(#body)" stroke="#ecdcc4" stroke-width="3" filter="url(#soft)"/>
+
+    <!-- screen sheen -->
+    <ellipse cx="172" cy="112" rx="40" ry="16" fill="#ffffff" opacity="0.5"/>
+
+    <!-- cheeks -->
+    <ellipse cx="138" cy="178" rx="17" ry="11" fill="#f3c9a8">
+      <animate attributeName="opacity" values="0.65;1;0.65" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="282" cy="178" rx="17" ry="11" fill="#f3c9a8">
+      <animate attributeName="opacity" values="0.65;1;0.65" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- ===================== FACE A: HAPPY / IDLE (with blink) ===================== -->
+    <g>
+      <!-- visible during 0-3s of a 12s cycle -->
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        keyTimes="0;0.24;0.25;1" values="1;1;0;0"/>
+      <!-- left eye -->
+      <g transform="translate(168,150)">
+        <ellipse rx="15" ry="17" fill="#2b2622">
+          <!-- blink: squash to a line briefly -->
+          <animate attributeName="ry" dur="12s" repeatCount="indefinite"
+            keyTimes="0;0.10;0.115;0.13;0.24;1" values="17;17;2;17;17;17"/>
+        </ellipse>
+        <circle cx="-5" cy="-6" r="4.5" fill="#fff"/>
+      </g>
+      <!-- right eye -->
+      <g transform="translate(252,150)">
+        <ellipse rx="15" ry="17" fill="#2b2622">
+          <animate attributeName="ry" dur="12s" repeatCount="indefinite"
+            keyTimes="0;0.10;0.115;0.13;0.24;1" values="17;17;2;17;17;17"/>
+        </ellipse>
+        <circle cx="-5" cy="-6" r="4.5" fill="#fff"/>
+      </g>
+      <!-- smile -->
+      <path d="M183 188 q27 26 54 0" stroke="#2b2622" stroke-width="6" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- ===================== FACE B: LISTENING (wide eyes, o-mouth) ===================== -->
+    <g>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        keyTimes="0;0.25;0.26;0.49;0.50;1" values="0;0;1;1;0;0"/>
+      <circle cx="168" cy="148" r="18" fill="#2b2622"/>
+      <circle cx="163" cy="143" r="5" fill="#fff"/>
+      <circle cx="252" cy="148" r="18" fill="#2b2622"/>
+      <circle cx="247" cy="143" r="5" fill="#fff"/>
+      <circle cx="210" cy="192" r="9" fill="#2b2622">
+        <animate attributeName="r" values="7;10;7" dur="0.9s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- ===================== FACE C: THINKING (eyes up, dots) ===================== -->
+    <g>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        keyTimes="0;0.50;0.51;0.74;0.75;1" values="0;0;1;1;0;0"/>
+      <g transform="translate(168,146)">
+        <ellipse rx="14" ry="15" fill="#2b2622"/>
+        <circle cx="3" cy="-6" r="4.5" fill="#fff"/>
+      </g>
+      <g transform="translate(252,146)">
+        <ellipse rx="14" ry="15" fill="#2b2622"/>
+        <circle cx="3" cy="-6" r="4.5" fill="#fff"/>
+      </g>
+      <!-- animated thinking dots -->
+      <circle cx="186" cy="192" r="4" fill="#2b2622">
+        <animate attributeName="opacity" values="0;1;1;1" dur="1.4s" repeatCount="indefinite" keyTimes="0;0.25;0.9;1"/>
+      </circle>
+      <circle cx="210" cy="192" r="4" fill="#2b2622">
+        <animate attributeName="opacity" values="0;0;1;1" dur="1.4s" repeatCount="indefinite" keyTimes="0;0.4;0.65;1"/>
+      </circle>
+      <circle cx="234" cy="192" r="4" fill="#2b2622">
+        <animate attributeName="opacity" values="0;0;0;1" dur="1.4s" repeatCount="indefinite" keyTimes="0;0.6;0.8;1"/>
+      </circle>
+    </g>
+
+    <!-- ===================== FACE D: TALKING (mouth opens/closes) ===================== -->
+    <g>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
+        keyTimes="0;0.75;0.76;0.99;1" values="0;0;1;1;0"/>
+      <circle cx="168" cy="150" r="16" fill="#2b2622"/>
+      <circle cx="163" cy="145" r="4.5" fill="#fff"/>
+      <circle cx="252" cy="150" r="16" fill="#2b2622"/>
+      <circle cx="247" cy="145" r="4.5" fill="#fff"/>
+      <!-- mouth height pulses like speech -->
+      <rect x="192" y="184" width="36" height="16" rx="8" fill="#2b2622">
+        <animate attributeName="height" values="6;20;10;24;8;18;6" dur="1.1s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="190;182;188;180;189;183;190" dur="1.1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- little status label that changes with the face -->
+  <g font-family="'Segoe UI',system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <text x="210" y="298" fill="#b07a5a">
+      <tspan>idle ~</tspan>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.24;0.25;1" values="1;1;0;0"/>
+    </text>
+    <text x="210" y="298" fill="#7c8c5a">
+      <tspan>listening...</tspan>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.25;0.26;0.49;0.50;1" values="0;0;1;1;0;0"/>
+    </text>
+    <text x="210" y="298" fill="#d79a4a">
+      <tspan>thinking...</tspan>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.50;0.51;0.74;0.75;1" values="0;0;1;1;0;0"/>
+    </text>
+    <text x="210" y="298" fill="#5f9bb0">
+      <tspan>talking!</tspan>
+      <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.75;0.76;0.99;1" values="0;0;1;1;0"/>
+    </text>
+  </g>
+</svg>
