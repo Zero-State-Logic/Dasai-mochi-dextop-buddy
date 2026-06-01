@@ -26,7 +26,7 @@ then pulls goofy faces when you leave it alone. <b>Flash it from your browser. N
 </p>
 
 <p>
-  <a href="https://YOUR-USERNAME.github.io/dasai-mochi-bot/"><b>⚡&nbsp;&nbsp;Flash your Mochi</b></a>
+  <a href="https://zero-state-logic.github.io/Dasai-mochi-dextop-buddy/"><b>⚡&nbsp;&nbsp;Flash your Mochi</b></a>
   &nbsp;·&nbsp;
   <a href="#-wiring">🔌&nbsp;Wiring</a>
   &nbsp;·&nbsp;
@@ -197,7 +197,7 @@ Everything runs at **3.3V**. Default pins live in [`config.h`](firmware/dasai_mo
 
 > ⚠️ **Reserved on the C3-Zero — don't use:** `GPIO9` (BOOT), `GPIO10` (onboard RGB LED),
 > `GPIO12–17` (onboard flash). The pins above already avoid all of them.
-> 👉 **[Interactive pin diagram on the project site →](https://YOUR-USERNAME.github.io/dasai-mochi-bot/#wiring)**
+> 👉 **[Interactive pin diagram on the project site →](https://zero-state-logic.github.io/Dasai-mochi-dextop-buddy/#wiring)**
 
 Full step-by-step: **[`hardware/WIRING.md`](hardware/WIRING.md)**
 
@@ -211,7 +211,7 @@ Full step-by-step: **[`hardware/WIRING.md`](hardware/WIRING.md)**
 
 ### 🙂 For users — no coding
 
-1. Open the **[flash page](https://YOUR-USERNAME.github.io/dasai-mochi-bot/)** in **Chrome / Edge / Opera**.
+1. Open the **[flash page](https://zero-state-logic.github.io/Dasai-mochi-dextop-buddy/)** in **Chrome / Edge / Opera**.
 2. **Hold BOOT** while plugging in USB-C (flash mode).
 3. Click **Connect & Flash**, pick the port, confirm.
 4. The bot makes a WiFi network: **`DasaiMochi-Setup`**.
